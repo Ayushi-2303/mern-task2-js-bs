@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasks Layout</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Task 1 Styles */
+    .task1-navbar-custom {
+      background-color: #00bfff;
+    }
+    .task1-navbar-links {
+      background-color: #d3d3d3;
+    }
+    .task1-content {
+      padding: 20px;
+      background-color: #ffffff;
+      text-align: center;
+      font-size: 16px;
+    }
+    .task1-sidebar {
+      background-color: #4d4d4d;
+      color: white;
+      height: 100vh;
+      padding-top: 20px;
+    }
+    .task1-main-content {
+      height: calc(100vh - 56px); /* 56px is the height of the navbar */
+    }
+
+    /* Task 2 Styles */
+    .task2-header {
+      background-color: #f2a900;
+      padding: 10px 0;
+    }
+    .task2-navbar-custom {
+      background-color: #1d1d1d;
+    }
+    .task2-navbar-nav .nav-link {
+      color: white !important;
+    }
+    .task2-hero {
+      position: relative;
+      background-image: url('C:/Users/ayush/OneDrive/Desktop/Mern/AdobeStock_220676590_Preview.jpeg');
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .task2-hero .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .task2-hero .content {
+      position: relative;
+      z-index: 2;
+    }
+    .task2-features {
+      background-color: #1d1d1d;
+      color: white;
+      padding: 20px 0;
+    }
+    .task2-features .feature-box {
+      background-color: #f2a900;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Task 1 -->
+  <h2 class="text-center mt-5">Task 1</h2>
+  <div class="task1-navbar-custom p-3">
+    <h2 class="text-center text-white">Ethnus Layout</h2>
+  </div>
+  <nav class="navbar navbar-expand-lg task1-navbar-links">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">MENU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">CONTACT</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">SIGNUP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">LOGIN</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row task1-main-content">
+      <div class="col-md-9 task1-content d-flex align-items-center justify-content-center">
+        <h4>Write your content here</h4>
+      </div>
+      <div class="col-md-3 task1-sidebar">
+        <p>This is</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Task 2 -->
+  <h2 class="text-center mt-5">Task 2</h2>
+  <div class="task2-header">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <h1>Builderz</h1>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="mr-3">
+          <p class="m-0">Opening Hour<br>Mon - Fri, 8:00 - 9:00</p>
+        </div>
+        <div class="mr-3">
+          <p class="m-0">Call Us<br>+123 456 789</p>
+        </div>
+        <div>
+          <p class="m-0">Email Us<br>info@example.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="navbar navbar-expand-lg task2-navbar-custom">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto task2-navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">SERVICE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TEAM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PROJECT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PAGES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-light" href="#">Get A Quote</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="task2-hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>We Are Professional</h1>
+      <h2>For Your Dream Project</h2>
+      <button class="btn btn-light">Get A Quote</button>
+    </div>
+  </div>
+  <div class="task2-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>Expert Worker</h3>
+            <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>Quality Work</h3>
+            <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>24/7 Support</h3>
+            <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare velit non.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3 - Pricing Layout</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Task 3 Styles */
+    .task3-header {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .task3-nav {
+      display: flex;
+      align-items: center;
+    }
+    .task3-nav a {
+      margin-left: 15px;
+    }
+    .task3-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .task3-card:hover {
+      transform: scale(1.05);
+    }
+    .task3-footer {
+      margin-top: 50px;
+      padding: 20px 0;
+      background-color: #f8f9fa;
+      border-top: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Task 3 Heading -->
+<h2 class="text-center my-5">Task 3</h2>
+
+<!-- Task 3 -->
+<div class="container">
+  <header class="task3-header mb-4">
+    <h1 class="mb-0">Company name</h1>
+    <nav class="task3-nav">
+      <a href="#" class="p-2">Features</a>
+      <a href="#" class="p-2">Enterprise</a>
+      <a href="#" class="p-2">Support</a>
+      <a href="#" class="p-2">Pricing</a>
+      <a href="#" class="btn btn-outline-primary ml-2">Sign up</a>
+    </nav>
+  </header>
+
+  <div class="text-center mb-5">
+    <h2>Pricing</h2>
+    <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card task3-card text-center">
+        <div class="card-body">
+          <h4 class="card-title">Free</h4>
+          <h3 class="card-price">$0 <small>/ mo</small></h3>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>10 users included</li>
+            <li>2 GB of storage</li>
+            <li>Email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card task3-card text-center">
+        <div class="card-body">
+          <h4 class="card-title">Pro</h4>
+          <h3 class="card-price">$15 <small>/ mo</small></h3>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>20 users included</li>
+            <li>10 GB of storage</li>
+            <li>Priority email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card task3-card text-center">
+        <div class="card-body">
+          <h4 class="card-title">Enterprise</h4>
+          <h3 class="card-price">$29 <small>/ mo</small></h3>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>30 users included</li>
+            <li>15 GB of storage</li>
+            <li>Phone and email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="task3-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>Features</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Cool stuff</a></li>
+          <li><a href="#">Random feature</a></li>
+          <li><a href="#">Team feature</a></li>
+          <li><a href="#">Stuff for developers</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Resources</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Resource</a></li>
+          <li><a href="#">Resource name</a></li>
+          <li><a href="#">Another resource</a></li>
+          <li><a href="#">Final resource</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>About</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Locations</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 text-center">
+        <h5>&copy; 2023 Company, Inc.</h5>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4 </title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .material-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+      margin: 10px 0;
+    }
+    .material-card:hover {
+      transform: scale(1.05);
+    }
+    .card-img-top {
+      height: 150px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="text-center my-5">Task 4</h2>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card material-card">
+        <img src="C:\Users\ayush\OneDrive\Desktop\Mern\bs.jpg" class="card-img-top" alt="Image 1">
+        <div class="card-body">
+          <h5 class="card-title">Material Cards</h5>
+          <p class="card-text">Cards for display in portfolio style material design by Google.</p>
+          <a href="#" class="card-link">LINK</a>
+          <a href="#" class="card-link">LINK</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card material-card">
+        <img src="C:\Users\ayush\OneDrive\Desktop\Mern\bs.jpg" class="card-img-top" alt="Image 2">
+        <div class="card-body">
+          <h5 class="card-title">Material Cards</h5>
+          <p class="card-text">Cards for display in portfolio style material design by Google.</p>
+          <a href="#" class="card-link">LINK</a>
+          <a href="#" class="card-link">LINK</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card material-card">
+        <img src="C:\Users\ayush\OneDrive\Desktop\Mern\bs.jpg" class="card-img-top" alt="Image 3">
+        <div class="card-body">
+          <h5 class="card-title">Material Cards</h5>
+          <p class="card-text">Cards for display in portfolio style material design by Google.</p>
+          <a href="#" class="card-link">LINK</a>
+          <a href="#" class="card-link">LINK</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card material-card">
+        <img src="C:\Users\ayush\OneDrive\Desktop\Mern\bs.jpg" class="card-img-top" alt="Image 4">
+        <div class="card-body">
+          <h5 class="card-title">Material Cards</h5>
+          <p class="card-text">Cards for display in portfolio style material design by Google.</p>
+          <a href="#" class="card-link">LINK</a>
+          <a href="#" class="card-link">LINK</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5 - Form</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .has-error .form-control {
+      border-color: #dc3545;
+    }
+    .has-error .form-control:focus {
+      box-shadow: none;
+    }
+    .has-error .form-control-feedback {
+      color: #dc3545;
+    }
+    .has-error .invalid-feedback {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="text-center my-5">Task 5</h2>
+  <form id="contactForm" novalidate>
+    <div class="form-group row">
+      <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
+      <div class="col-sm-10 input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-user"></i></span>
+        </div>
+        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+        <div class="invalid-feedback">Please supply your first name</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
+      <div class="col-sm-10 input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-user"></i></span>
+        </div>
+        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+        <div class="invalid-feedback">Please supply your last name</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="email" class="col-sm-2 col-form-label">E-Mail</label>
+      <div class="col-sm-10 input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+        </div>
+        <input type="email" class="form-control" id="email" placeholder="E-Mail Address" required>
+        <div class="invalid-feedback">Please supply your email address</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="phone" class="col-sm-2 col-form-label">Phone #</label>
+      <div class="col-sm-10 input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-phone"></i></span>
+        </div>
+        <input type="tel" class="form-control" id="phone" placeholder="(845)555-1212" required>
+        <div class="invalid-feedback">Please supply your phone number</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="address" class="col-sm-2 col-form-label">Address</label>
+      <div class="col-sm-10 input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-home"></i></span>
+        </div>
+        <input type="text" class="form-control" id="address" placeholder="Address" required>
+        <div class="invalid-feedback">Please supply your street address</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="city" class="col-sm-2 col-form-label">City</label>
+      <div class="col-sm-10 input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-building"></i></span>
+        </div>
+        <input type="text" class="form-control" id="city" placeholder="City" required>
+        <div class="invalid-feedback">Please supply your city</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="state" class="col-sm-2 col-form-label">State</label>
+      <div class="col-sm-10 input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-flag"></i></span>
+        </div>
+        <select class="form-control" id="state" required>
+          <option value="">Please select your state</option>
+          <!-- Add options for states here -->
+        </select>
+        <div class="invalid-feedback">Please supply your state</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Do you have hosting?</label>
+      <div class="col-sm-10">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="hosting" id="hostingYes" value="yes" required>
+          <label class="form-check-label" for="hostingYes">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="hosting" id="hostingNo" value="no" required>
+          <label class="form-check-label" for="hostingNo">No</label>
+        </div>
+        <div class="invalid-feedback">Please select an option</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="description" class="col-sm-2 col-form-label">Project Description</label>
+      <div class="col-sm-10 input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+        </div>
+        <textarea class="form-control" id="description" placeholder="Project Description" required></textarea>
+        <div class="invalid-feedback">Please supply your project description</div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10 offset-sm-2">
+        <button type="submit" class="btn btn-warning">Send <i class="fa fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      var form = document.getElementById('contactForm');
+      form.addEventListener('submit', function (event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    }, false);
+  })();
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Task 6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            width: 400px;
+            margin: auto;
+            margin-top: 50px;
+        }
+        .error-text {
+            color: red;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+  <title>Task 6</title>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Task 6</h5>
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <small class="error-text d-none">Name is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <small class="error-text d-none">Email is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                    <small class="error-text d-none">Password is required</small>
+                </div>
+                <div class="form-group">
+                    <label for="hobbies">Hobbies</label>
+                    <select class="form-control" id="hobbies" name="hobbies">
+                        <option value="">Select a hobby</option>
+                        <option value="reading">Reading</option>
+                        <option value="sports">Sports</option>
+                        <option value="music">Music</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-danger btn-block">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let isValid = true;
+            const fields = ["name", "email", "password"];
+            fields.forEach(function(field) {
+                const input = document.getElementById(field);
+                const errorText = input.nextElementSibling;
+                if (!input.value.trim()) {
+                    errorText.classList.remove("d-none");
+                    input.classList.add("is-invalid");
+                    isValid = false;
+                } else {
+                    errorText.classList.add("d-none");
+                    input.classList.remove("is-invalid");
+                }
+            });
+            if (isValid) {
+                alert("Form submitted successfully!");
+                // Here you can add your form submission logic
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+

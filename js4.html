@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks</title>
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+            width: 300px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1: Reverse Number -->
+    <div class="container">
+        <h1>Task 1</h1>
+        <h3>Reverse a Number</h3>
+        <form id="reverseForm">
+            <div class="form-group">
+                <label for="numberInput">Enter a Number:</label>
+                <input type="text" class="form-control" id="numberInput" placeholder="e.g. 32243">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="reverseNumber()">Reverse</button>
+            <button type="button" class="btn btn-secondary" onclick="clearInput1()">Clear</button>
+        </form>
+        <div class="result">
+            <h4>The Result Is:</h4>
+            <p id="resultDisplay1"></p>
+        </div>
+    </div>
+
+    <!-- Task 2: Sort Letters in String -->
+    <div class="container">
+        <h1>Task 2</h1>
+        <h3>Sort Letters in a String</h3>
+        <form id="sortForm">
+            <div class="form-group">
+                <label for="stringInput">Enter a String:</label>
+                <input type="text" class="form-control" id="stringInput" placeholder="e.g. webmaster">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="sortString()">Sort Letters</button>
+            <button type="button" class="btn btn-secondary" onclick="clearInput2()">Clear</button>
+        </form>
+        <div class="result">
+            <h4>The Result Is:</h4>
+            <p id="resultDisplay2"></p>
+        </div>
+    </div>
+
+    <!-- Task 3: Multiplication and Division -->
+    <div class="container">
+        <h1>Task 3</h1>
+        <h3>Multiplication and Division</h3>
+        <form id="calcForm">
+            <div class="form-group">
+                <label for="num1Input">Enter First Number:</label>
+                <input type="number" class="form-control" id="num1Input" placeholder="e.g. 10">
+            </div>
+            <div class="form-group">
+                <label for="num2Input">Enter Second Number:</label>
+                <input type="number" class="form-control" id="num2Input" placeholder="e.g. 5">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculate('multiply')">Multiply</button>
+            <button type="button" class="btn btn-secondary" onclick="calculate('divide')">Divide</button>
+            <button type="button" class="btn btn-secondary" onclick="clearInput3()">Clear</button>
+        </form>
+        <div class="result">
+            <h4>The Result Is:</h4>
+            <p id="resultDisplay3"></p>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Task 1: Reverse Number
+        function reverseNumber() {
+            const numberInput = document.getElementById('numberInput').value;
+            if (numberInput === '') {
+                alert('Please enter a number.');
+                return;
+            }
+            if (isNaN(numberInput)) {
+                alert('Please enter a valid number.');
+                return;
+            }
+            const reversedNumber = numberInput.split('').reverse().join('');
+            document.getElementById('resultDisplay1').innerText = reversedNumber;
+        }
+
+        function clearInput1() {
+            document.getElementById('numberInput').value = '';
+            document.getElementById('resultDisplay1').innerText = '';
+        }
+
+        // Task 2: Sort Letters in String
+        function sortString() {
+            const stringInput = document.getElementById('stringInput').value;
+            if (stringInput === '') {
+                alert('Please enter a string.');
+                return;
+            }
+            const sortedString = stringInput.split('').sort().join('');
+            document.getElementById('resultDisplay2').innerText = sortedString;
+        }
+
+        function clearInput2() {
+            document.getElementById('stringInput').value = '';
+            document.getElementById('resultDisplay2').innerText = '';
+        }
+
+        // Task 3: Multiplication and Division
+        function calculate(operation) {
+            const num1 = parseFloat(document.getElementById('num1Input').value);
+            const num2 = parseFloat(document.getElementById('num2Input').value);
+            let result;
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert('Please enter valid numbers.');
+                return;
+            }
+
+            if (operation === 'multiply') {
+                result = num1 * num2;
+            } else if (operation === 'divide') {
+                if (num2 === 0) {
+                    alert('Division by zero is not allowed.');
+                    return;
+                }
+                result = num1 / num2;
+            }
+
+            document.getElementById('resultDisplay3').innerText = result;
+        }
+
+        function clearInput3() {
+            document.getElementById('num1Input').value = '';
+            document.getElementById('num2Input').value = '';
+            document.getElementById('resultDisplay3').innerText = '';
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Task 4</h1>
+    <title>Show Date and Time</title>
+    <!-- Bootstrap CSS for styling -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+            width: 400px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        .btn {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn btn-primary btn-block" onclick="showDate()">Show Date</button>
+        <div class="result">
+            <p id="dateDisplay"></p>
+        </div>
+        <button class="btn btn-secondary btn-block" onclick="showTime()">Show Time</button>
+        <div class="result">
+            <p id="timeDisplay"></p>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function showDate() {
+            const date = new Date();
+            const day = date.getDate();
+            const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const month = monthNames[date.getMonth()];
+            const year = date.getFullYear();
+            const formattedDate = `${day}/${month}/${year}`;
+            document.getElementById('dateDisplay').innerText = formattedDate;
+        }
+
+        function showTime() {
+            const date = new Date();
+            const formattedTime = date.toString();
+            document.getElementById('timeDisplay').innerText = formattedTime;
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Task 5</h1>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="nameError">This field is required</span>
+        <br><br>
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <span class="error" id="emailError">A valid email address is required</span>
+        <br><br>
+        
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website">
+        <span class="error" id="websiteError">A valid URL is required</span>
+        <br><br>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea>
+        <span class="error" id="messageError">This field is required</span>
+        <br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let isValid = true;
+
+            // Name validation
+            const name = document.getElementById("name").value;
+            const nameError = document.getElementById("nameError");
+            if (name.trim() === "") {
+                nameError.style.display = "inline";
+                isValid = false;
+            } else {
+                nameError.style.display = "none";
+            }
+
+            // Email validation
+            const email = document.getElementById("email").value;
+            const emailError = document.getElementById("emailError");
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/;
+            if (!email.match(emailPattern)) {
+                emailError.style.display = "inline";
+                isValid = false;
+            } else {
+                emailError.style.display = "none";
+            }
+
+            // Website validation
+            const website = document.getElementById("website").value;
+            const websiteError = document.getElementById("websiteError");
+            const websitePattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+            if (website.trim() !== "" && !website.match(websitePattern)) {
+                websiteError.style.display = "inline";
+                isValid = false;
+            } else {
+                websiteError.style.display = "none";
+            }
+
+            // Message validation
+            const message = document.getElementById("message").value;
+            const messageError = document.getElementById("messageError");
+            if (message.trim() === "") {
+                messageError.style.display = "inline";
+                isValid = false;
+            } else {
+                messageError.style.display = "none";
+            }
+
+            // If the form is valid, submit the form
+            if (isValid) {
+                alert("Form submitted successfully!");
+                // Here you can add code to actually submit the form
+                // e.g., using AJAX or simply form.submit();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>Task 6</h1>
+    <title>Form Validation</title>
+    <style>
+        .error {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form name="myForm" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+        <span class="error" id="usernameError">Username must be filled out.</span><br><br>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <span class="error" id="ageError">Age must be a positive number greater than zero.</span><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError">Please enter a valid email.</span><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+            const username = document.forms["myForm"]["username"].value;
+            const age = document.forms["myForm"]["age"].value;
+            const email = document.forms["myForm"]["email"].value;
+
+            // Validate username
+            if (username === "") {
+                document.getElementById('usernameError').style.display = 'inline';
+                isValid = false;
+            } else {
+                document.getElementById('usernameError').style.display = 'none';
+            }
+
+            // Validate age
+            if (isNaN(age) || age <= 0) {
+                document.getElementById('ageError').style.display = 'inline';
+                isValid = false;
+            } else {
+                document.getElementById('ageError').style.display = 'none';
+            }
+
+            // Validate email
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').style.display = 'inline';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
+
+
+
+         
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7 and 8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        /* Train Animation Styles */
+        #train-container {
+            position: relative;
+            width: 100%; /* Full width container */
+            height: 300px; /* Adjust height as needed */
+            overflow: hidden; /* Hide overflow to contain the video */
+            margin-bottom: 20px; /* Margin to separate from next section */
+        }
+
+        #train {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width of container */
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Form Styles */
+        #formWrapper {
+            padding-top: 20px;
+        }
+
+        #registrationForm {
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto; /* Center the form */
+        }
+
+        #registrationForm .input-group {
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        #registrationForm .input-group label {
+            display: block;
+        }
+
+        #registrationForm .input-group input, 
+        #registrationForm .input-group select, 
+        #registrationForm .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        #registrationForm .feedback {
+            color: red;
+            font-size: 12px;
+            display: none;
+        }
+
+        .section {
+            margin-bottom: 40px; /* Spacing between sections */
+        }
+    </style>
+</head>
+<body>
+    <!-- Task 7: Train Animation -->
+    <div class="section">
+        <h1>Task 7: Train Animation</h1>
+        <div id="train-container">
+            <video id="train" src="train.mp4" loop></video>
+        </div>
+        <div class="controls">
+            <p>Click the following buttons to handle animation</p>
+            <button onclick="startAnimation()">Start</button>
+            <button onclick="stopAnimation()">Stop</button>
+        </div>
+    </div>
+
+    <!-- Task 8: Registration Form -->
+    <div class="section" id="formWrapper">
+        <h1>Task 8: Registration Form</h1>
+        <form id="registrationForm">
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" oninput="validateFirstName()">
+                <span id="firstNameFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" oninput="validateLastName()">
+                <span id="lastNameFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" oninput="validateEmail()">
+                <span id="emailFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" oninput="validatePassword()">
+                <span id="passwordFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label for="rePassword">Re-enter Password</label>
+                <input type="password" id="rePassword" name="rePassword" oninput="validateRePassword()">
+                <span id="rePasswordFeedback" class="feedback">POOR OR MISMATCH</span>
+            </div>
+            <div class="input-group">
+                <label>Gender</label>
+                <input type="radio" id="male" name="gender" value="male"> Male
+                <input type="radio" id="female" name="gender" value="female"> Female
+            </div>
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" oninput="validateAge()">
+                <span id="ageFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" oninput="validatePhoneNumber()">
+                <span id="phoneNumberFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" oninput="validateAddress()"></textarea>
+                <span id="addressFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" oninput="validateState()">
+                <span id="stateFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" onchange="validateCountry()">
+                    <option value="">Choose your country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <!-- Add more countries as needed -->
+                </select>
+                <span id="countryFeedback" class="feedback">POOR</span>
+            </div>
+            <div class="input-group">
+                <label>Languages known</label>
+                <input type="checkbox" name="languages" value="English"> English
+                <input type="checkbox" name="languages" value="Kannada"> Kannada
+                <input type="checkbox" name="languages" value="Hindi"> Hindi
+                <input type="checkbox" name="languages" value="Telugu"> Telugu
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="declaration" name="declaration"> Hereby I declare all the given details are true
+            </div>
+            <button type="button" onclick="validateForm()">REGISTER</button>
+        </form>
+    </div>
+
+    <script>
+        // Train Animation
+        var train = document.getElementById('train');
+        var position = 0;
+        var animationFrame;
+
+        function startAnimation() {
+            train.play();
+            animate();
+        }
+
+        function stopAnimation() {
+            train.pause();
+            cancelAnimationFrame(animationFrame);
+        }
+
+        function animate() {
+            position++;
+            train.style.left = -position + 'px'; // Adjust left position based on desired animation effect
+            animationFrame = requestAnimationFrame(animate);
+        }
+
+        // Form Validation
+        function validateFirstName() {
+            const firstName = document.getElementById('firstName');
+            const feedback = document.getElementById('firstNameFeedback');
+            if (firstName.value.trim() === '') {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateLastName() {
+            const lastName = document.getElementById('lastName');
+            const feedback = document.getElementById('lastNameFeedback');
+            if (lastName.value.trim() === '') {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateEmail() {
+            const email = document.getElementById('email');
+            const feedback = document.getElementById('emailFeedback');
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email.value)) {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById('password');
+            const feedback = document.getElementById('passwordFeedback');
+            if (password.value.length < 6) {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateRePassword() {
+            const password = document.getElementById('password');
+            const rePassword = document.getElementById('rePassword');
+            const feedback = document.getElementById('rePasswordFeedback');
+            if (rePassword.value !== password.value || rePassword.value === '') {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateRePassword() {
+            const password = document.getElementById('password');
+            const rePassword = document.getElementById('rePassword');
+            const feedback = document.getElementById('rePasswordFeedback');
+            if (rePassword.value !== password.value || rePassword.value === '') {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateAge() {
+            const age = document.getElementById('age');
+            const feedback = document.getElementById('ageFeedback');
+            if (age.value < 18) {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validatePhoneNumber() {
+            const phoneNumber = document.getElementById('phoneNumber');
+            const feedback = document.getElementById('phoneNumberFeedback');
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phoneNumber.value)) {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateAddress() {
+            const address = document.getElementById('address');
+            const feedback = document.getElementById('addressFeedback');
+            if (address.value.trim() === '') {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateState() {
+            const state = document.getElementById('state');
+            const feedback = document.getElementById('stateFeedback');
+            if (state.value.trim() === '') {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateCountry() {
+            const country = document.getElementById('country');
+            const feedback = document.getElementById('countryFeedback');
+            if (country.value === '') {
+                feedback.style.display = 'inline';
+            } else {
+                feedback.style.display = 'none';
+            }
+        }
+
+        function validateForm() {
+            validateFirstName();
+            validateLastName();
+            validateEmail();
+            validatePassword();
+            validateRePassword();
+            validateAge();
+            validatePhoneNumber();
+            validateAddress();
+            validateState();
+            validateCountry();
+            const declaration = document.getElementById('declaration');
+            if (!declaration.checked) {
+                alert('Please declare that the information is true.');
+            } else {
+                alert('Registration Successful!');
+            }
+        }
+    </script>
+</body>
+</html>
+
